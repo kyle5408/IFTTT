@@ -9,6 +9,7 @@ const port = 3000
 app.engine('hbs', exhbs.engine({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
 app.use(methodOverride('_method'))
 
 const routes = require('./routes')

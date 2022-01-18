@@ -1,9 +1,11 @@
-const serviceKey = process.env.serviceKey;
+require('dotenv').config()
+const IFTTT_SERVICE_KEY = process.env.IFTTT_SERVICE_KEY
+
 
 module.exports = {
   serviceKeyCheck: function (req, res, next) {
-    const key = req.get("serviceKey");
-    if (key !== serviceKey) {
+    const key = req.get("IFTTT-Service-Key");
+    if (key !== IFTTT_SERVICE_KEY) {
       res.status(401).send();
     }
     next();
