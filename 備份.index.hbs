@@ -1,12 +1,15 @@
 <div class="m-2">
-  <form action="/getNumber" method="post">
+  <form id="getNumber">
     <label>Type number</label>
     <input type="text" name="value1">
-    <button class="btn btn-secondary" type="submit">Submit</button>
+    <button class="btn btn-secondary" onclick="sendNumber()">Submit</button>
   </form>
+  <a href="/test">
+    <button class="btn btn-secondary">Submit2</button>
+  </a>
+
 </div>
 
-{{!--
 <script>
   const webhooksKey = "RcoIikHtwIl4t57PwgMzw"
   function sendNumber() {
@@ -15,4 +18,4 @@
     form.method = "POST"
     form.submit()
   }
-</script> --}}
+</script>
