@@ -1,18 +1,15 @@
 <div class="m-2">
   <form action="/getNumber" method="post">
-    <label>Type number</label>
+    <label>Type Number</label>
     <input type="text" name="value1">
     <button class="btn btn-secondary" type="submit">Submit</button>
   </form>
 </div>
 
-{{!--
-<script>
-  const webhooksKey = "RcoIikHtwIl4t57PwgMzw"
-  function sendNumber() {
-    const form = document.querySelector("#getNumber")
-    form.action = `https://maker.ifttt.com/trigger/getNumber/with/key/${webhooksKey}`
-    form.method = "POST"
-    form.submit()
-  }
-</script> --}}
+<div class="m-2">
+  <form action="/openGuestWifi" method="post">
+    <label></label>
+    <button class="btn btn-secondary" type="submit">Open Guest Wifi</button>
+  </form>
+</div>
+

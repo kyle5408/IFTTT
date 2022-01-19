@@ -15,6 +15,15 @@ router.post('/getNumber', (req, res) => {
   })
 })
 
+//openGuestWifi
+router.post('/openGuestWifi', (req, res) => {
+  console.log('change name')
+  request({ url: `https://maker.ifttt.com/trigger/openGuestWifi/with/key/${webhooksKey}`, data: req.body }, function (err, response, data) {
+    req.flash('success_messages', data)
+    res.redirect('/')
+  })
+})
+
 router.get('/', (req, res) => {
   res.render('index')
 })
